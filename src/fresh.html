@@ -21,15 +21,14 @@
 
         <div class="logo">
             <picture>
-                <img class="lazy" src="./images/placeholder.jpg" data-src="./images/bountiful_foods_logo.jpg" alt="Bountiful Foods Logo">
+                <img class="lazy" src="./images/placeholder.jpg" data-src="./images/bountiful_foods_logo.jpg"
+                    alt="Bountiful Foods Logo">
             </picture>
             <section class="headings">
                 <h1>Bountiful Foods</h1>
                 <q class="Slogan">The Freshest Fruits in the Golden Coast!</q>
             </section>
-            
         </div>
-        
         <nav>
             <ul class="navigation">
                 <li><a class="ham" href="#">&#9776;</a></li>
@@ -65,7 +64,6 @@
                             id="Logo__x2014__FIXED" style="fill:#fff;fill-rule:nonzero;" />
                     </g>
                 </svg></a>
-                
             <a href="https://linkedin.com"><svg height="32px"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                     viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -91,40 +89,142 @@
         <p>Find us at 555 Fruit Lane Carslbad, California<br>
             Call us at 555-253-8945<br> Email us at BountifulFoods@Gmail.com
         </p>
-        
 
     </header>
-    <img class="lazy" id="fruitSpread1" src="./images/placeholder.jpg" data-src="./images/fruit-spread-min-1.jpg" alt="Fruit Spread banner">
-    
-    <main id="index">
-        <div class="summary">
-            <h3>Carlsbad</h3>
-            <p>Carlsbad is a popular tourist destination and home to many businesses in the golf industry.</p>
-            <p>Population: 114,746</p>
-            <p> Elevation: 52ft</p>
+    <h2 id="join_title">Lets make your new favorite drink!</h2>
+    <h3 id="join_subtitle">Please fill out this form below</h3>
+    <img class="lazy" id="fruit-drinks" src="./images/placeholder.jpg" data-src="./images/fruit-drink-banner-min.png" alt="Fruit Drink Spread">
+    <div class="formContainer">
+        <form id="form" onsubmit="return false">
+            <fieldset>
+                <label >Name* <input type="text" id="fname" name="fname" placeholder="Adam Appleseed" required></label>
+                <label >Email*
+                    <input type="email" id="email" name="email" placeholder="AdamAppleseed@gmail.com" required></label>
+                <label >Cell phone number*
+                    <input type="tel" id="phone" name="phone" placeholder="1235551234" required></label>
+                    <br>
+                <label >Select a fruit
+                    <select name="Fruit1" id="fruit1" required>
+                        <option value="">Fruit 1</option>
+                    </select>
+                </label>
+                <label >Select a fruit
+                    <select name="Fruit2" id="fruit2" required>
+                        <option value="">Fruit 2</option>
+                    </select>
+                </label>
+                <label >Select a fruit
+                    <select name="Fruit3" id="fruit3" required>
+                        <option value="">Fruit 3</option>
+                    </select>
+                </label>
+                <label >Special Instructions
+                    <textarea name="instructions" id="instructions" rows="4" cols="23"></textarea>
+                </label>
+                <br>
+                <button id="submitForm" type="submit">Get Drink Info</button>
+            </fieldset>
+            <input type="text" id="drink-date" name="drink-date" hidden>
+        </form>
+    </div>
+    <div id="drinks-grid-container">
+        <div id="user-drink">
+            <h2>Your Drinks</h2>
+            <hr>
+            <div id="drink-list-inner-div">
+                <table id="userDrinks">
+                </table>
+            </div>
+            <p id="drink-counter"></p>
         </div>
-        <div class="weather">
-            <h3>Weather Report</h3>
-            <img src="../lesson_7/images/placeholder.jpg" alt="Weather Icon" id="weatherlogo">
-            <p id="caption"></p>
-            <span id="temperature"></span>
-            <p id="currently"></p>
-            <p id="humidity"></p>
-            <p>3-day Forecast</p>
-            <span id="forecast"></span>
-            <p>Weather information courtesy of openweathermap.org</p>
+        <div id="receipt">
+            <h2>Drink Nutrition</h2>
+            <hr>
+            <table id="userDrinkReceipt">
+                <tr>
+                    <td>
+                        <h2>Date</h2>
+                    </td>
+                    <td id="drinkDate">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Name</h2>
+                    </td>
+                    <td id="drink-fname">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Email</h2>
+                    </td>
+                    <td id="drink-email"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Phone</h2>
+                    </td>
+                    <td id="drink-phone"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Fruits</h2>
+                    </td>
+                    <td id="drink-fruitnames"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Carbs</h2>
+                    </td>
+                    <td id="drink-carbs"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Protein</h2>
+                    </td>
+                    <td id="drink-protein"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Fat</h2>
+                    </td>
+                    <td id="drink-fat"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Sugar</h2>
+                    </td>
+                    <td id="drink-sugar"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Calories</h2>
+                    </td>
+                    <td id="drink-calories"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Grams</h2>
+                    </td>
+                    <td id="drink-grams"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Instructions</h2>
+                    </td>
+                    <td id="drink-instructions"></td>
+                </tr>
+
+            </table>
         </div>
-        <div class="fresh">
-            <p id="drink-counter">You have made no drinks!</p>
-            <a id="action-drink" href="./fresh.html"> Make Your Drink Today!</a>
-        </div>
-    </main>
-    
+    </div>
     <footer>
         <span id="lastModified">copyright/name/WDD230 Project/Last Modified</span>
     </footer>
-    <img class="lazy" id="fruitSpread2" src="./images/placeholder.jpg" data-src="./images/fruit-spread-min-3.jpg" alt="Fruit Spread banner">
     <script src="./scripts/last_modified.js"></script>
     <script src="./scripts/lazyload.js"></script>
-    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/datalist_fruits.js"></script>
 </body>
